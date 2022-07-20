@@ -1,0 +1,19 @@
+.PokeId {
+  font-size: 0.5rem;
+
+  &--green {
+    color: rgba(116, 203, 72, 1);
+  }
+
+  &--orange {
+    color: rgba(245, 125, 49, 1);
+  }
+
+  &--yellow {
+    color: rgba(249, 207, 48, 1);
+  }
+
+  &--blue {
+    color: rgba(100, 147, 235, 1);
+  }
+}

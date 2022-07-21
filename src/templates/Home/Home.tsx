@@ -5,7 +5,7 @@ import { Heading } from "@molecules";
 import { PokeCard } from "@organisms";
 import { useDispatch, useSelector } from "react-redux";
 import { setPokemonSlice } from "../../store/modules/pokemon.store";
-import { useGetPokemonByNameQuery } from "../../api";
+import { useGetPokemonByNameQuery } from "@api";
 
 export default function Home() {
   const [filteredPokemons, setFilteredPokemons] = useState([]);
@@ -20,8 +20,8 @@ export default function Home() {
     } else return;
   }, [isLoading]);
 
-  function handleFilterPokemons(event) {
-    const filterPokemons = pokemons.pokemons.filter((pokemon) => {
+  function handleFilterPokemons(event: { target: { value: string; }; }) {
+    const filterPokemons = pokemons.pokemons.filter((pokemon: { name: string | any[]; }) => {
       return pokemon.name.includes(event.target.value.trim().toLowerCase());
     });
     setFilteredPokemons(filterPokemons);
@@ -37,7 +37,7 @@ export default function Home() {
         {!isLoading && filteredPokemons != [] ? (
           filteredPokemons.map((pokemon) => {
             return (
-              <li key={pokemon.name} className={styles.PokeCard__listItem}>
+              <li key={pokemon?.name} className={styles.PokeCard__listItem}>
                 <PokeCard name={pokemon.name} url={pokemon.url} />
               </li>
             );

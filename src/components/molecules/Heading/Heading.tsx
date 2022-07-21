@@ -1,7 +1,12 @@
 import React from "react";
 import styles from "./Heading.module.scss";
 
-export default function Heading({ title, className }) {
+type HeadingProps = {
+  title: string;
+  className?: string;
+}
+
+export default function Heading({ title, className }: HeadingProps) {
   return (
     <div className={styles.Heading__content}>
       <img

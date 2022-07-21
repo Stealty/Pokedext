@@ -1,6 +1,11 @@
 import styles from "./PokemonName.module.scss";
 
-export default function PokemonName({ name, type }) {
+type PokemonNameProps = {
+  name: string;
+  type: string;
+}
+
+export default function PokemonName({ name, type }: PokemonNameProps) {
   return (
     <p
       className={

@@ -1,7 +1,13 @@
 import { useEffect, useState } from "react";
 import styles from "./PokemonImage.module.scss";
 
-export default function PokemonImage({ name, image, loading }) {
+type PokemonImageProps = {
+  name: string;
+  image: string;
+  loading: boolean;
+}
+
+export default function PokemonImage({ name, image, loading }: PokemonImageProps) {
   const [pokemon, setPokemon] = useState("./images/loading.gif");
 
   useEffect(() => {

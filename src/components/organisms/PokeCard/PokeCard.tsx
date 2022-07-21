@@ -1,9 +1,16 @@
 import styles from "./PokeCard.module.scss";
 import { PokeId, PokemonImage, PokemonName } from "@atoms";
 import { useEffect, useState } from "react";
-import useFetch from "../../../hooks/useFetch";
+import useFetch from "@hooks/useFetch";
 
-export default function PokeCard({ name, type, url, color }) {
+type PokeCardProps = {
+  name: string;
+  type: string;
+  url: string;
+  color: string;
+}
+
+export default function PokeCard({ name, type, url, color }: PokeCardProps) {
   const [pokemon, setPokemon] = useState({});
   const [pokemonImage, setPokemonImage] = useState("");
   const [data, loading, error] = useFetch(url);
@@ -12,6 +19,7 @@ export default function PokeCard({ name, type, url, color }) {
     if (data) {
       setPokemon(data);
       setPokemonImage(data.sprites.front_default);
+      console.log(data)
     } else {
       return;
     }

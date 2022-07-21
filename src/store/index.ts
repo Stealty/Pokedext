@@ -13,7 +13,7 @@
 
 import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/query";
-import { pokemonApi } from "../api";
+import { pokemonApi } from "@api";
 import pokemonSliceReducer from "./modules/pokemon.store";
 
 export const store = configureStore({

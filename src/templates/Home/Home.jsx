@@ -33,7 +33,6 @@ export default function Home() {
         <Heading title="Pokedex" />
       </div>
       <Filter filter={handleFilterPokemons} />
-      {/* <button onClick={handleFetch}>Dispatch</button> */}
       <ul className={styles.PokeCard__wrapper}>
         {!isLoading && filteredPokemons != [] ? (
           filteredPokemons.map((pokemon) => {

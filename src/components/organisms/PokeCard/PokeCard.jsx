@@ -28,7 +28,7 @@ export default function PokeCard({ name, type, url, color }) {
         image={pokemonImage}
         loading={loading}
       />
-      <PokemonName name={name} />
+      <PokemonName name={name} type={data?.types[0].type.name} />
     </div>
   );
 }

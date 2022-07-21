@@ -1,1 +1,1 @@
-export { default as PokeCard } from "./PokeCard/PokeCard.jsx";
+export { default as PokeCard } from "./PokeCard/PokeCard.tsx";

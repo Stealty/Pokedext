@@ -1,6 +1,11 @@
 import styles from "./PokeId.module.scss";
 
-export default function PokeId({ pokemonId, classColor }) {
+type PokeIdProps = {
+  pokemonId:  number;
+  classColor?: string;
+}
+
+export default function PokeId({ pokemonId, classColor }: PokeIdProps) {
   return (
     <span
       className={

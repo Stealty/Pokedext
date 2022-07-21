@@ -18,7 +18,13 @@ export default function PokeCard({ name, type, url, color }) {
   }, [loading]);
 
   return (
-    <div className={styles.PokeCard__container}>
+    <div
+      className={
+        styles.PokeCard__container +
+        " " +
+        styles[`PokeCard__container--${data?.types[0].type.name}`]
+      }
+    >
       <div className={styles.PokeCard__idWrapper}>
         <PokeId pokemonId={pokemon.id} classColor={color} />
       </div>
@@ -28,7 +34,7 @@ export default function PokeCard({ name, type, url, color }) {
         image={pokemonImage}
         loading={loading}
       />
-      <PokemonName name={name} />
+      <PokemonName name={name} type={data?.types[0].type.name} />
     </div>
   );
 }

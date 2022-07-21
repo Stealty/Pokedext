@@ -9,6 +9,61 @@
   border: 1px solid rgba(116, 203, 72, 1);
   border-radius: 10px;
   justify-content: space-between;
+
+  &--normal {
+    border: 1px solid #aaa67f;
+  }
+  &--fighting {
+    border: 1px solid #c12239;
+  }
+  &--flying {
+    border: 1px solid #a890f0;
+  }
+  &--poison {
+    border: 1px solid #a040a0;
+  }
+  &--ground {
+    border: 1px solid #e0c068;
+  }
+  &--rock {
+    border: 1px solid #b8a038;
+  }
+  &--bug {
+    border: 1px solid #a8b820;
+  }
+  &--ghost {
+    border: 1px solid #705898;
+  }
+  &--steel {
+    border: 1px solid #b8b8d0;
+  }
+  &--fire {
+    border: 1px solid #f08030;
+  }
+  &--water {
+    border: 1px solid #6890f0;
+  }
+  &--grass {
+    border: 1px solid #78c850;
+  }
+  &--electric {
+    border: 1px solid #f8d030;
+  }
+  &--psychic {
+    border: 1px solid #f85888;
+  }
+  &--ice {
+    border: 1px solid #98d8d8;
+  }
+  &--dragon {
+    border: 1px solid #7038f8;
+  }
+  &--dark {
+    border: 1px solid #705848;
+  }
+  &--fairy {
+    border: 1px solid #ee99ac;
+  }
 }
 
 .PokeCard__idWrapper {
